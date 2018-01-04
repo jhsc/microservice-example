@@ -1,0 +1,10 @@
+version: "3"
+services:
+  todos-api:
+    build: ./server
+    image: todos-api
+    volumes:
+      - .:/usr/src/app
+    environment:
+      TODO_API_PORT: 8081
+      JWT_SECRET: myfancysecret
